@@ -32,10 +32,15 @@ jobs:
         cd www
         npm ci
 
-    - name: Build
+    - name: TypeScript Check
       run: |
         cd www
-        npm run build
+        npx tsc --noEmit
+
+    - name: Vite Build
+      run: |
+        cd www
+        npx vite build --debug
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
