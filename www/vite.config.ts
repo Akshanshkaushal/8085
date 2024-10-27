@@ -6,7 +6,7 @@ import topLevelAwait from 'vite-plugin-top-level-await'
 import path from 'path'
 
 export default defineConfig(({ command }) => ({
-  base: command === 'serve' ? '/' : '/8085/',  // '/' for dev, '/8085/' for production
+  base:  '/8085/',  
   build: {
     outDir: path.resolve(__dirname, 'build'),
     target: 'esnext',
