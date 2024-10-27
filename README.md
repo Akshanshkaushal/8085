@@ -1,16 +1,16 @@
-![plot](./8085.png)
-
 # PP8085
 
-**PP808** is a program that emulates the Intel 8085 Microprocessor architecure. The library is written in Rust and aims to mirror the operation of the
-physical device.
+**PP8085** is a Rust-based emulation library for the Intel 8085 Microprocessor architecture. Designed to closely replicate the functionality of the physical 8085 microprocessor, PP8085 covers all documented instructions, though it is not clock-cycle accurate. The full list of supported instructions can be found [here](https://www.javatpoint.com/instruction-set-of-8085).
 
-The emulation is not clock cycle accurate. All of the instructions described in the specification have been implemented. A list of all the instruction can be found [here](https://www.javatpoint.com/instruction-set-of-8085)
+## Project Components
 
-This project has three major components:
-* Rust Emulation Library of 8085
-* 8085 assmebler 
+1. **Rust Emulation Library**  
+   Implements the full 8085 instruction set for accurate software-based emulation.
 
-*Interrupts do not work as of yet(RIM and SIM do nothing).*
+2. **8085 Assembler**  
+   Enables assembly-level coding and translation of instructions for emulation.
 
-Parts of the Rust API have been exposed to WebAssembly using `wasm-pack` and `wasm-bindgen`. The web-app is built with React on TypeScript.
+3. **Web Interface**  
+   The Rust API is exposed to WebAssembly using `wasm-pack` and `wasm-bindgen`, enabling a browser-based interface built with React and TypeScript.
+
+> **Note:** Interrupts are not yet implemented, so instructions `RIM` and `SIM` are currently non-functional.
