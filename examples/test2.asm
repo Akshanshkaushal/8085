@@ -1,6 +1,0 @@
-MVI B,35h
-MOV A,B
-STA 00ffh
-MVI A, 00h
-LDA 00ffh
-hlt
