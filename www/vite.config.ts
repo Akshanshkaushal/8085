@@ -7,6 +7,7 @@ import path from 'path'
 
 export default defineConfig({
   build: {
+    base: '/8085/',
     outDir: path.resolve(__dirname, 'build'),
     target: 'esnext',
     rollupOptions: {
