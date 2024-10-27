@@ -5,8 +5,8 @@ import wasm from 'vite-plugin-wasm'
 import topLevelAwait from 'vite-plugin-top-level-await'
 import path from 'path'
 
-export default defineConfig({
-  base: '/8085/',  
+export default defineConfig(({ command }) => ({
+  base: command === 'serve' ? '/' : '/8085/',  // '/' for dev, '/8085/' for production
   build: {
     outDir: path.resolve(__dirname, 'build'),
     target: 'esnext',
@@ -23,4 +23,4 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['pp8085'],
   },
-})
+}))
