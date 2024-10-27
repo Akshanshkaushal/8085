@@ -6,8 +6,8 @@ import topLevelAwait from 'vite-plugin-top-level-await'
 import path from 'path'
 
 export default defineConfig({
+  base: '/8085/',  
   build: {
-    base: '/8085/',
     outDir: path.resolve(__dirname, 'build'),
     target: 'esnext',
     rollupOptions: {
